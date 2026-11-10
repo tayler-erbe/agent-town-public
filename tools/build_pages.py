@@ -106,7 +106,7 @@ def main() -> None:
     page(portfolio / "agent-town-system-design.html", ROOT / "design" / "index.html",
          "Agent Town &middot; System Design",
          "End-to-end system design of Agent Town: where its data comes from, how one server turns it into a snapshot, "
-         "how a command reaches the job queue, the design decisions, and what is measured, live, built and not built.",
+         "how a command reaches the job queue, the design decisions, and what is measured, in use, built and not built.",
          "design", local)
     page(portfolio / "agent-city.html", ROOT / "built" / "index.html",
          "Agent Town &middot; How It Was Built",

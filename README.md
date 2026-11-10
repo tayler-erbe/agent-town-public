@@ -4,15 +4,15 @@
 
 Agent Town is a visual skin over a system that was already running: a job queue, local models on one GPU, and Claude.
 Every walk, light and animation comes from a real job, model server or file, so I can see who is working on what
-across my projects without reading logs. It is a personal project by **Tayler Erbe**, running daily on my desktop
-and still being built.
+across my projects without reading logs. It is a personal project by **Tayler Erbe**, in use on my desktop since
+October 2026 and still being built.
 
 **Visit the site:** [tayler-erbe.github.io/agent-town-public](https://tayler-erbe.github.io/agent-town-public/)
 
 | Page | What it covers |
 |---|---|
 | [Overview](https://tayler-erbe.github.io/agent-town-public/) | What the town is and what it does, with screens |
-| [System design](https://tayler-erbe.github.io/agent-town-public/design/) | The system map, the town's rhythm, one command end to end, design decisions, and what is measured, live, built and not built |
+| [System design](https://tayler-erbe.github.io/agent-town-public/design/) | The system map, the town's rhythm, one command end to end, design decisions, and what is measured, in use, built and not built |
 | [How it was built](https://tayler-erbe.github.io/agent-town-public/built/) | From a 2D town to pixel art, concept art and 3D, with the trial and error |
 | [The agents](https://taylererbe.com/agent-architecture.html) | On my portfolio: the agents the town shows and how they work |
 
