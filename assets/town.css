@@ -1,0 +1,45 @@
+/* Agent Town public site: page parts not in site.css. Tokens only (site.css defines them). */
+.hero-links { margin-top: var(--space-6); display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+.tile-grid { display: grid; gap: var(--space-3); margin: var(--space-3) 0 var(--space-6); }
+.tile-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.tile-grid-4 { grid-template-columns: repeat(4, 1fr); }
+.tile-grid-5 { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 860px) { .tile-grid-3, .tile-grid-4, .tile-grid-5 { grid-template-columns: repeat(2, 1fr); } }
+.tile { margin: 0; border: 1px solid var(--border); background: var(--surface); }
+.tile a { display: block; }
+.tile img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.tile-top img { object-position: top; }
+.tile-contain img { object-fit: contain; background: var(--surface2); }
+.tile figcaption { padding: 0.5rem 0.65rem; font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--muted); letter-spacing: 0.04em; line-height: 1.4; }
+.tile-row-label { margin-top: var(--space-5); font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent2); text-transform: uppercase; letter-spacing: var(--tracking-label); }
+.shot-narrow { max-width: 760px; margin-left: auto; margin-right: auto; }
+.progress-list { margin: 0 0 1em; padding-left: 1.2em; }
+.progress-list li { margin-bottom: 0.4em; }
+
+.diagram { background: var(--surface2); border: 1px solid var(--border); margin: var(--space-6) 0; }
+.diagram-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 1.25rem; }
+.diagram-scroll svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.diagram figcaption { padding: 0.85rem 1.1rem; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); font-family: var(--font-mono); letter-spacing: 0.03em; }
+.scroll-hint { display: none; font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--muted); padding: 0 1.25rem 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+@media (max-width: 800px) { .scroll-hint { display: block; } }
+.d-frame { fill: none; stroke: var(--border); stroke-width: 1.5; }
+.d-frame-dash { fill: none; stroke: var(--muted2); stroke-width: 1.3; stroke-dasharray: 5 4; }
+.d-box { fill: var(--surface); stroke: var(--border); stroke-width: 1.2; }
+.d-box-accent { fill: var(--accent-faint); stroke: var(--accent2); stroke-width: 1.2; }
+.d-box-warm { fill: var(--coral-bg); stroke: var(--accent3); stroke-width: 1.2; }
+.d-box-dash { fill: var(--surface); stroke: var(--muted2); stroke-width: 1.2; stroke-dasharray: 3 3; }
+.d-line { fill: none; stroke: var(--muted); stroke-width: 1.3; }
+.d-line-accent { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.d-line-warm { fill: none; stroke: var(--accent3); stroke-width: 1.5; }
+.d-arrow { fill: var(--muted); }
+.d-arrow-accent { fill: var(--accent); }
+.d-arrow-warm { fill: var(--accent3); }
+.diagram-scroll svg text { font-family: var(--font-body); }
+.d-title { fill: var(--accent2); font-family: var(--font-mono) !important; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.d-label { fill: var(--text); font-size: 12px; }
+.d-label-strong { fill: var(--white); font-size: 12.5px; }
+.d-small { fill: var(--muted); font-size: 10.5px; }
+.status-table td:first-child { white-space: nowrap; }
+.links-line { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.04em; margin-top: var(--space-3); }
+.links-line a { color: var(--accent); }

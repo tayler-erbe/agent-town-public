@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Town &middot; How It Was Built</title>
+  <meta name="description" content="How Agent Town was built: from a basic 2D town to a pixel city, concept art and a 3D town in the browser, with the tools, the trial and error, and the progression in pictures." />
+  <link rel="stylesheet" href="../assets/site.css" />
+  <link rel="stylesheet" href="../assets/town.css" />
+</head>
+<body>
+  <nav class="site-nav" aria-label="Site">
+    <a href="../" class="nav-logo">Agent Town</a>
+    <ul class="site-nav-links">
+      <li><a href="../design/">System design</a></li>
+      <li><a href="../built/" aria-current="page">How it was built</a></li>
+      <li class="nav-secondary"><a href="https://taylererbe.com/agent-architecture.html">The agents</a></li>
+      <li class="nav-secondary"><a href="https://github.com/tayler-erbe/agent-town-public">GitHub</a></li>
+      <li><a href="https://taylererbe.com/">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Tayler Erbe &middot; Hobby Project &middot; Oct 2026 to Present</div>
+    <h1>Agent City<br><span>How I built my little agent town</span></h1>
+    <p class="hero-desc">People have been DMing me asking how I built my little agent town, so here&rsquo;s a breakdown 😊 It might look complex, but the underlying system of agents was already built and running without a visual UI. The town is essentially a visual skin over that system. I just gave the agents cute little faces and somewhere to live 😂 I wanted an easier, more enjoyable way to see who was working on what across my projects.</p>
+
+    <div class="hero-meta">
+      <div class="meta-item"><div class="meta-label">Status</div><div class="meta-value">Hobby project &middot; still very much under development</div></div>
+      <div class="meta-item"><div class="meta-label">Runs on</div><div class="meta-value">JavaScript &amp; Three.js in the browser</div></div>
+      <div class="meta-item"><div class="meta-label">Residents</div><div class="meta-value">32 characters</div></div>
+    </div>
+
+    <div class="toc">
+      <a href="#why"><span class="toc-num">01</span><span class="toc-name">Why a town</span></a>
+      <a href="#visual"><span class="toc-num">02</span><span class="toc-name">From 2D to concept art to 3D</span></a>
+      <a href="#behind"><span class="toc-num">03</span><span class="toc-name">Behind the town</span></a>
+      <a href="#progression"><span class="toc-num">04</span><span class="toc-name">The progression</span></a>
+    </div>
+  </div>
+
+  <!-- 01 WHY -->
+  <section id="why">
+    <div class="section-header">
+      <div class="section-tag">01 / Why a town</div>
+      <h2 class="section-title">Why a town</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="prose">
+      <p>It&rsquo;s a hobby project and still very much under development. Each character represents an agent, and the world gives me a way to see their activity instead of following everything through logs and text.</p>
+    </div>
+
+    <div class="tile-grid tile-grid-3">
+      <figure class="tile"><a href="../assets/shots/t-map.jpg"><img src="../assets/shots/t-map.jpg" alt="The 3D island map with its labelled neighbourhoods" loading="lazy"></a><figcaption>The island</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-characters.jpg"><img src="../assets/shots/t-characters.jpg" alt="All 32 characters in 3D, lined up" loading="lazy"></a><figcaption>All 32 residents</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-geisel.jpg"><img src="../assets/shots/t-geisel.jpg" alt="Geisel Library in the 3D town at dusk" loading="lazy"></a><figcaption>Geisel Library</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-lounge.jpg"><img src="../assets/shots/t-lounge.jpg" alt="A cozy office with a fireplace, bookshelves and a rug" loading="lazy"></a><figcaption>A cozy office</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-cafe-dj.jpg"><img src="../assets/shots/t-cafe-dj.jpg" alt="The jazz café interior with the DJ chat panel open" loading="lazy"></a><figcaption>Chatting with the caf&eacute; DJ</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-gpu-keeper.jpg"><img src="../assets/shots/t-gpu-keeper.jpg" alt="The GPU Keeper, a beaver, in its office with its status panel" loading="lazy"></a><figcaption>The GPU Keeper&rsquo;s office</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-patio.jpg"><img src="../assets/shots/t-patio.jpg" alt="A lounge with a string-lit patio" loading="lazy"></a><figcaption>A lounge and patio</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-cafe.jpg"><img src="../assets/shots/t-cafe.jpg" alt="The Jazz Kissaten and Records café from outside" loading="lazy"></a><figcaption>The jazz caf&eacute;</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/t-park.jpg"><img src="../assets/shots/t-park.jpg" alt="The park with its spiral slide" loading="lazy"></a><figcaption>The park</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 02 VISUAL -->
+  <section id="visual">
+    <div class="section-header">
+      <div class="section-tag">02 / From 2D to concept art to 3D</div>
+      <h2 class="section-title">From 2D to concept art to 3D</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="prose">
+      <p>Visually, it started as a basic 2D town, then became a pixel art city. From there, I made concept art for the world and its 32 characters, incorporating places I love, like Geisel Library, and spaces I wanted in the town, like a cozy jazz and record caf&eacute;.</p>
+      <p>The world runs in the browser using JavaScript and Three.js. I tested Tencent&rsquo;s Hunyuan3D 2.1 and Microsoft TRELLIS to turn my concept images into 3D models on my GPU. Hunyuan worked better for my characters, but the buildings needed a different approach. You can see why in the bottom row: soft edges, wobbly details, and architecture that looked like clay.</p>
+      <p>I switched to Blender scripts that assembled the buildings from individual parts. That gave me more control over the shapes, followed by several rounds of adding siding, porches, plants, stone, and vines.</p>
+      <p>The characters needed cleanup too: colours, rigging, moving ears and tails, and fixes like restoring the moth&rsquo;s wing patterns. BiRefNet handled background removal, and Blender handled rigging, animation, and cleanup. I compared the results against the concept art throughout the process.</p>
+    </div>
+
+    <div class="tile-row-label">Top row &middot; the town</div>
+    <div class="tile-grid tile-grid-4">
+      <figure class="tile tile-top"><a href="../assets/shots/p-2d-town.jpg"><img src="../assets/shots/p-2d-town.jpg" alt="The first 2D town: a green board with signposts" loading="lazy"></a><figcaption>Day 1: the first 2D town</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-pixel-city.jpg"><img src="../assets/shots/p-pixel-city.jpg" alt="The pixel art city at night" loading="lazy"></a><figcaption>Next: a pixel art city</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-concept-map.jpg"><img src="../assets/shots/p-concept-map.jpg" alt="The illustrated concept map of the island" loading="lazy"></a><figcaption>My concept map</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-3d-town.jpg"><img src="../assets/shots/p-3d-town.jpg" alt="The 3D island today" loading="lazy"></a><figcaption>The 3D town today</figcaption></figure>
+    </div>
+    <div class="tile-row-label">Second row &middot; the characters</div>
+    <div class="tile-grid tile-grid-3">
+      <figure class="tile"><a href="../assets/shots/p-test-chars.jpg"><img src="../assets/shots/p-test-chars.jpg" alt="Three simple first test characters" loading="lazy"></a><figcaption>Day 1: the first test characters</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-char-art.jpg"><img src="../assets/shots/p-char-art.jpg" alt="Character concept art: Sage, Beat, Frankie, Miso, Morel, Ink, Luna and June" loading="lazy"></a><figcaption>My character art</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-32-chars.jpg"><img src="../assets/shots/p-32-chars.jpg" alt="All 32 characters in 3D" loading="lazy"></a><figcaption>All 32 characters in 3D</figcaption></figure>
+    </div>
+    <div class="tile-row-label">Third row &middot; concept to town</div>
+    <div class="tile-grid tile-grid-4">
+      <figure class="tile"><a href="../assets/shots/p-geisel-concept.jpg"><img src="../assets/shots/p-geisel-concept.jpg" alt="Concept art of Geisel Library" loading="lazy"></a><figcaption>My Geisel concept</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-geisel-3d.jpg"><img src="../assets/shots/p-geisel-3d.jpg" alt="Geisel Library in the 3D town" loading="lazy"></a><figcaption>Geisel in 3D</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-cafe-concept.jpg"><img src="../assets/shots/p-cafe-concept.jpg" alt="Concept art of the jazz and records café" loading="lazy"></a><figcaption>My caf&eacute; concept</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-cafe-3d.jpg"><img src="../assets/shots/p-cafe-3d.jpg" alt="The café in the 3D town" loading="lazy"></a><figcaption>The caf&eacute; in 3D</figcaption></figure>
+    </div>
+    <div class="tile-row-label">Bottom row &middot; trial and error</div>
+    <div class="tile-grid tile-grid-5">
+      <figure class="tile"><a href="../assets/shots/p-geisel-ai.jpg"><img src="../assets/shots/p-geisel-ai.jpg" alt="The AI-generated Geisel model, soft and blobby" loading="lazy"></a><figcaption>AI 3D model: blobby</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-geisel-script.jpg"><img src="../assets/shots/p-geisel-script.jpg" alt="Geisel rebuilt by Blender script" loading="lazy"></a><figcaption>Rebuilt by script</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-cottage-ai.jpg"><img src="../assets/shots/p-cottage-ai.jpg" alt="An AI-generated cottage with a clay look" loading="lazy"></a><figcaption>AI cottage: the clay look</figcaption></figure>
+      <figure class="tile"><a href="../assets/shots/p-cottage-script.jpg"><img src="../assets/shots/p-cottage-script.jpg" alt="The script-built cottage" loading="lazy"></a><figcaption>Script-built cottage</figcaption></figure>
+      <figure class="tile tile-contain"><a href="../assets/shots/p-wing-fix.jpg"><img src="../assets/shots/p-wing-fix.jpg" alt="The moth's wings before and after the pattern fix" loading="lazy"></a><figcaption>Wing fix: before, after</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 03 BEHIND -->
+  <section id="behind">
+    <div class="section-header">
+      <div class="section-tag">03 / Behind the town</div>
+      <h2 class="section-title">Behind the town</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="prose">
+      <p>Behind the town, a Python server and job queue connect the characters&rsquo; activity to the agents&rsquo; actual work. The agents can use Claude or Qwen3 32B running locally through vLLM or Ollama.</p>
+      <p>My setup is an RTX 5090 with 32 GB of VRAM, a Ryzen 9 9950X, and 64 GB of RAM. The image-to-3D generation step uses about 17 GB of GPU memory in my setup.</p>
+    </div>
+
+    <div class="prose" style="margin-top:1rem;"><p><a href="https://taylererbe.com/agent-architecture.html" class="link">Read the full agent architecture &#8594;</a> &nbsp; <a href="../design/" class="link">Read the town&rsquo;s system design &#8594;</a></p></div>
+
+    <figure class="shot shot-narrow">
+      <img src="../assets/shots/cafe-dj-wide.jpg" alt="Inside the jazz kissaten café: chatting with the café's music agent, which suggests records for the mood" loading="lazy">
+      <figcaption>The jazz caf&eacute;, where the music agent suggests records</figcaption>
+    </figure>
+  </section>
+
+  <!-- 04 PROGRESSION -->
+  <section id="progression">
+    <div class="section-header">
+      <div class="section-tag">04 / The progression</div>
+      <h2 class="section-title">The progression</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="prose">
+      <p>The pictures above show the progression:</p>
+      <ul class="progress-list">
+        <li>Top row: the basic 2D town, pixel city, concept map, and current 3D world.</li>
+        <li>Second row: the first test characters, character concept art, and all 32 in 3D.</li>
+        <li>Third row: Geisel Library and the caf&eacute;, from concept to their versions in the town.</li>
+        <li>Bottom row: some trial and error, including the generated buildings beside their scripted rebuilds, and the moth&rsquo;s wings before and after fixing them.</li>
+      </ul>
+      <p>Still plenty to build and fix, but apparently giving my agents faces also meant giving them a caf&eacute;, beach cottages, and a much nicer work environment than mine.</p>
+    </div>
+
+    <div class="tag-row" style="margin-top:1.5rem;">
+      <span class="tag tag-warm">Hobby Project</span><span class="tag tag-accent">Three.js</span><span class="tag tag-accent">JavaScript</span><span class="tag tag-accent">Hunyuan3D 2.1</span><span class="tag">Microsoft TRELLIS</span><span class="tag">BiRefNet</span><span class="tag tag-accent">Blender</span><span class="tag">Python</span><span class="tag">Claude</span><span class="tag">Qwen3 32B</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">RTX 5090</span>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer-meta">
+      <p>Agent Town &middot; a personal project by Tayler Erbe</p>
+    </div>
+    <ul class="site-footer-links">
+      <li><a href="../">Agent Town</a></li>
+      <li><a href="../design/">System design</a></li>
+      <li><a href="../built/">How it was built</a></li>
+      <li><a href="https://taylererbe.com/">Portfolio</a></li>
+      <li><a href="https://github.com/tayler-erbe" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/tayler-erbe-194374141" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
